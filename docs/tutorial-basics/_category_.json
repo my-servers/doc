@@ -1,0 +1,8 @@
+{
+  "label": "插件列表",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "所有支持的插件以及使用教程"
+  }
+}
