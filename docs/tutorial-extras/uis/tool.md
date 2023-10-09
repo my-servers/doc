@@ -19,17 +19,13 @@ sidebar_position: 1
 
 
 ## UI的共同能力
-### 详情 detail
-`SetDetail`
-如果有设置ui展示的详情信息，那么点击ui的时候会弹出ui的具体信息，格式是`Markdown`
 
-### 高度 height
-`SetHeight`
-可以自定义UI的高度
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`SetDetail(detail)`|设置详情，点击会展示|`detail` `字符串` markdown格式内容|`UI`|
+|`SetHeight(height)`|设置高度|`height` `number` 高度|`UI`|
+|`AddAction(action)`|添加菜单|`action` `Action` 动作|`UI`|
 
-### 动作 actions 
-`AddAction`
-添加动作后，长按UI，会弹出对应的功能菜单，支持多个菜单列表
 
 ## 基础的组件
 
@@ -38,25 +34,16 @@ sidebar_position: 1
 
 ### String 字符串
 
-#### `NewString`
-- 创建一个字符串
-#### `SetContent`
-- 设置字符串内容
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewString(str)`|创建字符串|`str` `字符串` 字符串内容|`String`|
+|`SetContent(content)`|设置内容|`content` `字符串` 字符串内容|`String`|
+|`SetColor(color)`|设置颜色|`color` `字符串` 颜色|`String`|
+|`SetBackendColor(color)`|设置背景颜色，设置后会变成标签样式|`color` `字符串` 颜色|`String`|
+|`SetBackendColor(color)`|设置背景颜色，设置后会变成标签样式|`color` `字符串` 颜色|`String`|
+|`SetOpacity(opacity)`|设置背景透明度|`opacity` `number` 透明度0-1|`String`|
+|`SetFontSize(size)`|设置字体大小|`size` `number` 字体大小|`String`|
 
-#### `SetColor`
-- 设置字符串颜色
-
-#### `SetBackendColor`
-- 设置字符串背景，设置后会变成标签样式
-
-
-#### `SetOpacity`
-- 设置字符串背景透明度
-
-
-
-#### `SetFontSize`
-- 设置字符串字体大小
 
 -------------
 
@@ -67,40 +54,37 @@ sidebar_position: 1
 |--|--|--|
 |1_0|1_1|1_2|
 
-#### `SetAlignment`
-- 设置对齐方式 `leading左，center中，trailing右`
 
-
-#### `AddString`
-- 添加字符串，只需要指定在**某一行**添加字符串
-
-#### `SetString`
-- 设置字符串，需要指定在**某一行某一列**添加字符串
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewText(alignment)`|创建文本|`alignment` `字符串` 对齐方式 leading 左，center 中，trailing 右|`Text`|
+|`SetString(row, col, str)`|设置某个位置的字符串|`row` `number` 行 <br/> `col` `number` 列 <br/> `str` `String` 字符串（非原生字符串）|`Text`|
+|`AddString(row, str)`|在某一行添加字符串|`row` `number` 行 <br/>`str` `String` 字符串（非原生字符串）|`Text`|
+|`SetAlignment(a)`|设置对齐方式|`a` `字符串` 对齐方式 leading 左，center 中，trailing 右）|`Text`|
 
 -----------
 
 ### Point 点
 折线图上点的定义
 
-#### `NewPoint` 
-- 创建一个点
 
-#### `SetVal` 
-- 设置该点的值
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewPoint(val, x)`|创建一个点|`val` `number` 数值 <br/> `x` `字符串` 横坐标|`Point`|
+|`SetVal(val)`|设置数值|`val` `number` 数值 |`Point`|
+|`SetX(x)`|设置横坐标|`x` `字符串` 横坐标|`Point`|
 
-#### `SetX` 
-- 设置该点的横坐标
+
 
 -----------
 
 
 ### Input 用户输入
 
-#### `NewInput` 
-- 创建用户的输入，包含描述盒展示优先级，以及默认值
-
-#### `SetVal`
-- 设置默认值
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewInput(desc, priority)`|创建用户的输入|`desc` `字符串` 描述 <br/> `priority` `number` 优先级|`Input`|
+|`SetVal(val)`|设置默认值|`val` `字符串` 值|`Input`|
 
 
 -----------
@@ -109,35 +93,41 @@ sidebar_position: 1
 ### Action 动作
 UI的菜单点击事件
 
-#### `NewAction`
-- 创建一个动作，包含回调服务端的函数名，参数，以及展示的名字
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewAction(func, arg, name)`|创建一个点击动作|`func` `字符串` 回调服务端的函数名 <br/> `arg` `table` 需要透传给服务端的参数 <br/> `name` `字符串` 动作展示的名字|`Action`|
+|`SetName(name)`|设置名字|`name` `字符串` 显示的名字|`Action`|
+|`SetCheck(check)`|设置二次确认|`check` `bool` 是否需要二次确认|`Action`|
+|`SetIcon(icon)`|设置图标|`icon` `字符串` 图标，IOS支持的所有原生图标|`Action`|
+|`SetFunc(func)`|设置回调函数名|`func` `字符串` 函数名|`Action`|
+|`SetArg(arg)`|设置回调函数时需要透传给服务端的参数|`arg` `table` 参数|`Action`|
+|`AddInput(key, input)`|添加用户输入|`key` `字符串` 用户输入的参数名  <br/> `input` `Input` 用户输入|`Action`|
 
-#### `SetName`
-- 设置菜单名
-
-
-
-#### `SetFunc`
-- 设置回调服务端的lua函数名
-
-
-#### `SetArg`
-- 设置回调服务端的时候，需要带上的参数
-
-#### `AddInput`
-- 如果需要带上用户的输入数据，那么需要添加输入框
-
-
-#### `SetCheck`
-- 是否需要二次确认
-
-
-#### `SetIcon`
-- 展示的icon
 
 
 
 ### ProcessData 进度数据
 
-### NewIconButton 点击图标
+
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewProcessData(cur, total)`|创建一个进度数据|`cur` `number` 当前数值 <br/>`total` `number` 总数|`ProcessData`|
+
+
+
+### IconButton 点击图标
+
+
+|函数名|功能|参数|返回值|
+|--|--|--|--|
+|`NewIconButton()`|创建一个可点击的带icon的button||`IconButton`|
+|`SetIcon(icon)`|设置icon名字|`icon` `字符串` IOS系统自带的所有icon|`IconButton`|
+|`SetColor(color)`|设置icon的颜色|`color` `字符串` 如：#FFF|`IconButton`|
+|`SetSize(size)`|设置icon的大小|`size` `number` 字体大小|`IconButton`|
+|`SetDesc(desc)`|设置展示的文本|`desc` `Text` 文本|`IconButton`|
+|`SetAction(action)`|设置点击的动作|`action` `Action` 动作|`IconButton`|
+|`SetId(id)`|设置id，唯一就行|`id` `字符串` id|`IconButton`|
+
+
+
 
