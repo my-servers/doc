@@ -24,7 +24,7 @@ sidebar_position: 1
 |--|--|--|--|
 |`SetDetail(detail)`|设置详情，点击会展示|`detail` `字符串` markdown格式内容|`UI`|
 |`SetHeight(height)`|设置高度|`height` `number` 高度|`UI`|
-|`AddAction(action)`|添加菜单|`action` `Action` 动作|`UI`|
+|`AddAction(action)`|添加菜单|`action` [Action](tool#action-动作) 动作|`UI`|
 
 
 ## 基础的组件
@@ -101,7 +101,7 @@ UI的菜单点击事件
 |`SetIcon(icon)`|设置图标|`icon` `字符串` 图标，IOS支持的所有原生图标|`Action`|
 |`SetFunc(func)`|设置回调函数名|`func` `字符串` 函数名|`Action`|
 |`SetArg(arg)`|设置回调函数时需要透传给服务端的参数|`arg` `table` 参数|`Action`|
-|`AddInput(key, input)`|添加用户输入|`key` `字符串` 用户输入的参数名  <br/> `input` `Input` 用户输入|`Action`|
+|`AddInput(key, input)`|添加用户输入|`key` `字符串` 用户输入的参数名  <br/> `input` [Input](tool#input-用户输入) 用户输入|`Action`|
 
 
 
@@ -124,8 +124,8 @@ UI的菜单点击事件
 |`SetIcon(icon)`|设置icon名字|`icon` `字符串` IOS系统自带的所有icon|`IconButton`|
 |`SetColor(color)`|设置icon的颜色|`color` `字符串` 如：#FFF|`IconButton`|
 |`SetSize(size)`|设置icon的大小|`size` `number` 字体大小|`IconButton`|
-|`SetDesc(desc)`|设置展示的文本|`desc` `Text` 文本|`IconButton`|
-|`SetAction(action)`|设置点击的动作|`action` `Action` 动作|`IconButton`|
+|`SetDesc(desc)`|设置展示的文本|`desc` [Text](tool#text-多段文本) 文本|`IconButton`|
+|`SetAction(action)`|设置点击的动作|`action` [Action](tool#action-动作) 动作|`IconButton`|
 |`SetId(id)`|设置id，唯一就行|`id` `字符串` id|`IconButton`|
 
 
