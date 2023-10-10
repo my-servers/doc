@@ -88,7 +88,12 @@ end
 ---@param ctx Ctx
 ---@return AppUIData
 function update(ctx)
-    return {}
+    return NewApp()
+            .AddUi(1, NewTextUi().SetText(
+                NewText("leading").AddString(1, NewString("Hello World"))
+              )
+            )
+            .Data()
 end
 
 ```
@@ -97,6 +102,7 @@ end
 
 #### update 函数
 最重要的一个函数，每次客户端轮询的时候，会调用这个函数，需要返回要展示的UI。
+- 上面的例子就是直接返回一个文本UI
 
 
 ### README.md
