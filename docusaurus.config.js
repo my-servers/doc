@@ -55,6 +55,11 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-FP67187K3W',
+        anonymizeIP: true,
+      },
     ],
   ],
 
