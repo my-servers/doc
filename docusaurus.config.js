@@ -32,6 +32,16 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-FP67187K3W',
+        anonymizeIP: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -52,13 +62,6 @@ const config = {
         },
       }),
     ],
-    [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'G-FP67187K3W',
-        anonymizeIP: true,
-      },
-    ]
   ],
 
   themeConfig:
