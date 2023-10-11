@@ -11,5 +11,3 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "adcf0ad12cc94526b5fddd1eec23339d"}'>
-</script>
