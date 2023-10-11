@@ -36,13 +36,13 @@ const config = {
     {src: '/google.js', async: true},
   ],
   plugins: [
-    [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'G-FP67187K3W',
-        anonymizeIP: true,
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-google-analytics',
+    //   {
+    //     trackingID: 'G-FP67187K3W',
+    //     anonymizeIP: true,
+    //   },
+    // ],
   ],
 
   presets: [
