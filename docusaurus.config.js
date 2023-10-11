@@ -31,7 +31,10 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  scripts: [
+    {src: 'https://www.googletagmanager.com/gtag/js?id=G-FP67187K3W', async: true},
+    {src: '/google.js', async: true},
+  ],
   plugins: [
     [
       '@docusaurus/plugin-google-analytics',
