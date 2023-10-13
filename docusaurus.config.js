@@ -32,7 +32,7 @@ const config = {
     locales: ['en'],
   },
   scripts: [
-    {src: 'https://www.googletagmanager.com/gtag/js?id=G-FP67187K3W', async: true},
+    {src: 'https://www.googletagmanager.com/gtag/js?id=G-0FRHK4MPSV', async: true},
     {src: 'https://static.cloudflareinsights.com/beacon.min.js', async: true, 'data-cf-beacon':'{"token": "adcf0ad12cc94526b5fddd1eec23339d"}'},
     {src: '/google.js', async: true},
   ],

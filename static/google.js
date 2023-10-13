@@ -1,7 +1,7 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-FP67187K3W');
+gtag('config', 'G-0FRHK4MPSV');
 
 var _hmt = _hmt || [];
 (function() {
@@ -10,4 +10,3 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-
