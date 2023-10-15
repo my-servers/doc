@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MyServers',
-  tagline: '高扩展的服务器，应用监控',
-  favicon: 'img/favicon.ico',
+  tagline: '一个App监控管理个人所有的服务器和应用',
+  favicon: 'img/newMyServer1024.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
@@ -36,8 +36,37 @@ const config = {
     {src: 'https://static.cloudflareinsights.com/beacon.min.js', async: true, 'data-cf-beacon':'{"token": "adcf0ad12cc94526b5fddd1eec23339d"}'},
     {src: '/google.js', async: true},
   ],
-  plugins: [
 
+  plugins: [
+    function () {
+      return {
+        name: 'docusaurus-plugin-scss',
+        configureWebpack() {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.scss$/,
+                  use: [
+                    'style-loader',
+                    {
+                      loader: 'css-loader',
+                      options: {
+                        importLoaders: 1,
+                        modules: {
+                          localIdentName: '[local]__[hash:base64:5]',
+                        },
+                      },
+                    },
+                    'sass-loader',
+                  ],
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
   ],
 
   presets: [
@@ -77,8 +106,9 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '教程',
+            position: 'right',
+            label: '文档',
+            className: 'custom-nav'
           },
           {
             href: 'https://github.com/my-servers',

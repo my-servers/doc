@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: '安全',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/security.svg').default,
     description: (
       <>
         为了确保客户端与服务端之间的交互安全可靠，我们采用对称加密传输的方式，同时对密钥进行<b>离线保存在本地</b>，以防止第三方获取数据。
@@ -20,7 +20,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '开源',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/code.svg').default,    
     description: (
       <>
         服务端插件代码<b>完全开源</b>
@@ -29,10 +29,37 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '插件市场',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/Launch.svg').default,
     description: (
       <>
         所有的服务管理基于<b>插件化实现</b>，可扩展性高，开发门槛低，简单几行代码就能写一个管理的界面。
+      </>
+    ),
+  },
+  {
+    title: '可扩展',
+    Svg: require('@site/static/img/explore.svg').default,
+    description: (
+      <>
+        可自己开发各种插件，实现对<b>任意服务</b>的管理，欢迎开源贡献各种插件。
+      </>
+    ),
+  },
+  {
+    title: '丰富的UI组件',
+    Svg: require('@site/static/img/Analytics.svg').default,
+    description: (
+      <>
+        插件开发支持各种UI组件，可以支持文本，统计视图，条形进度，圆形进度，markdown等，持续支持更多组件
+      </>
+    ),
+  },
+  {
+    title: '多服务器支持',
+    Svg: require('@site/static/img/cloud-storage.svg').default,
+    description: (
+      <>
+        可以添加多个服务器，自由切换管理
       </>
     ),
   },

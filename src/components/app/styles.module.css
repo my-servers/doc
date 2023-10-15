@@ -1,0 +1,72 @@
+.app{
+    background-color: #827d7d;
+    width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top; 
+    background-blend-mode: multiply;
+    height: calc(100vh - 60px);
+    
+}
+.screenshot1{
+    border-radius: 30px;
+    height: 800px;
+    width: auto;
+    box-shadow:  
+    5px 5px 30px #d6d5d5;
+   transform: rotate(-7deg);
+}
+.screenshot1{
+    border-radius: 30px;
+    height: 800px;
+    width: auto;
+    box-shadow:  
+    5px 5px 30px #d6d5d5;
+   transform: rotate(-7deg);
+}
+.screenshot2{
+    border-radius: 30px;
+    height: 800px;
+    width: auto;
+    box-shadow:  
+    5px 5px 30px #1b1b1b;
+   transform: rotate(7deg);
+}
+
+.screenshotDiv {
+   margin: 0;
+   padding: 0;
+   
+   padding-top: 30px;
+   padding-left: 10%;
+   padding-bottom: 30px;
+   width: 50%;
+   float: left;
+}
+.appInfo{
+   margin: 0;
+   padding: 0;
+   
+   padding-top: 15%;
+   padding-left: 10%;
+   padding-bottom: 30px;
+   width: 30%;
+   float: left;
+
+}
+
+
+
+.doc{
+    margin: auto;
+    margin-top: 30%;
+}
+
+.appIcon{
+    border-radius: 20px;
+    height: 100px;
+}
+
+.appStore{
+    height: 80px;
+}
