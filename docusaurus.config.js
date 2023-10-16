@@ -33,7 +33,6 @@ const config = {
   },
   scripts: [
     {src: 'https://www.googletagmanager.com/gtag/js?id=G-3X2XHTPPF', async: true},
-    {src: 'https://static.cloudflareinsights.com/beacon.min.js', async: true, 'data-cf-beacon':'{"token": "adcf0ad12cc94526b5fddd1eec23339d"}'},
     {src: '/google.js', async: true},
   ],
 
