@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/newMyServer1024.png',
 
   // Set the production url of your site here
-  url: 'https://myservers.codeloverme.cn,
+  url: 'https://myservers.codeloverme.cn',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
