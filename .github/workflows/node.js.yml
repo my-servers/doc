@@ -1,38 +1,33 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: 编译push到腾讯云
+name: ci
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
 
 jobs:
-  build:
-
+  docker:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.17.1]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build 
-    - name: Upload files to server
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SERVER_SSH_HOST }} # 服务器域名
-        username: ${{ secrets.SERVER_SSH_USER }} # 腾讯云默认用户名为root
-        key: ${{ secrets.SERVER_SSH_KEY }} # 本地.ssh文件下的私钥id_rsa，存在secrets中
-        source: './build' # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
-        target: ${{ secrets.SERVER_SSH_TARGET }} # 目标目录
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          platforms: |
+            linux/amd64
+            linux/arm64
+          push: true
+          tags: myservers/web:latest
