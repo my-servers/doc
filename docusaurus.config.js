@@ -37,15 +37,6 @@ const config = {
   ],
 
   plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: [],
-        filename: 'sitemap.xml',
-      },
-    ],
     function () {
       return {
         name: 'docusaurus-plugin-scss',
@@ -78,6 +69,17 @@ const config = {
   ],
 
   presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
+      },
+    ],
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
