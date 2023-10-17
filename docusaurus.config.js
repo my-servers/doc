@@ -89,7 +89,7 @@ const config = {
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          ignorePatterns: ['/tags/**','/blog/**'],
           filename: 'sitemap.xml',
         },
       }),
