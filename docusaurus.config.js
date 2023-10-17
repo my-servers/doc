@@ -32,7 +32,7 @@ const config = {
     locales: ['en'],
   },
   scripts: [
-    {src: 'https://www.googletagmanager.com/gtag/js?id=G-3X2XHTPPF', async: true},
+    {src: 'https://www.googletagmanager.com/gtag/js?id=G-3X2XHTPPFL', async: true},
     {src: '/google.js', async: true},
   ],
 
