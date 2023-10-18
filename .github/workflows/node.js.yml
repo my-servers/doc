@@ -18,6 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: 拉取插件
+      run: git clone https://github.com/my-servers/plugin.git
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
