@@ -31,6 +31,11 @@ export default function App(screenshotSrc): JSX.Element {
                     <img className={`${scss.iphoneImg} ${scss.screenshot2}`} src="img/app.jpg"></img>
                 </div>
             </div>
+
+            <div className={scss.downloadImg}>
+                <img src="img/myserverDownload.png"></img>
+                <span>扫码下载App</span>
+            </div>
         </div>
     );
 }
