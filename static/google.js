@@ -23,5 +23,8 @@ function gtag_report_conversion(url) {
       'send_to': 'AW-11371629200/gSd_CP6agO8YEJCVta4q',
       'event_callback': callback
   });
+  gtag('event', 'click', {
+    'id': 'app_store',
+  });
   return false;
 }
