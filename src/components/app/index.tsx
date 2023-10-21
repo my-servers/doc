@@ -11,7 +11,7 @@ export default function App(screenshotSrc): JSX.Element {
                 <div className={scss.appInfo}>
                     <div className={scss.appHead}>
                         <div>
-                            <img src="img/newMyServer1024.png" className={scss.appIcon}></img>
+                            <img src="img/newMyServer1024.png" className={scss.appIcon} alt="myservers logo"></img>
                         </div>
                         <div>
                             <h1>MyServers</h1>
@@ -22,18 +22,20 @@ export default function App(screenshotSrc): JSX.Element {
                     <br></br>
                     
                     <div>
-                        <a href='https://apps.apple.com/app/myservers/id6466196656' onClick={() => gtag_report_conversion("https://apps.apple.com/app/myservers/id6466196656")}><img src="img/appstore.png" className={scss.appStore}></img></a>
+                        <a href='https://apps.apple.com/app/myservers/id6466196656' onClick={() => gtag_report_conversion("https://apps.apple.com/app/myservers/id6466196656")}>
+                            <img src="img/appstore.png" className={scss.appStore}  alt="myservers download url 下载链接"></img>
+                            </a>
                     </div>
                 </div>
 
                 <div className={scss.screenshotDiv}>
-                    <img className={`${scss.iphoneImg} ${scss.screenshot1}`} src="img/service.jpg"></img>
-                    <img className={`${scss.iphoneImg} ${scss.screenshot2}`} src="img/app.jpg"></img>
+                    <img className={`${scss.iphoneImg} ${scss.screenshot1}`} src="img/service.webp"  alt="myservers service screenshot 服务截图"></img>
+                    <img className={`${scss.iphoneImg} ${scss.screenshot2}`} src="img/app.webp" alt="myservers app screenshot 应用截图"></img>
                 </div>
             </div>
 
             <div className={scss.downloadImg}>
-                <img src="img/myserverDownload.png"></img>
+                <img src="img/myserverDownload.png" alt="myservers download url 扫码下载地址"></img>
                 <span>扫码下载App</span>
             </div>
         </div>
