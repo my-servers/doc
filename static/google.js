@@ -11,6 +11,7 @@ var _hmt = _hmt || [];
     "@type": "SoftwareApplication",
     "name": "MyServers",
     "operatingSystem": "iOS",
+    "applicationCategory":"UtilitiesApplication",
     "offers": {
       "@type": "Offer",
       "price": "0",
