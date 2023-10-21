@@ -93,6 +93,14 @@ const config = {
         },
       }),
     ],
+    [
+      '@docusaurus/preset-classic',
+      {
+        googleAnalytics: {
+          trackingID: 'G-3X2XHTPPFL',
+        },
+      },
+    ],
   ],
 
   themeConfig:
