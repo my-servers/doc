@@ -34,7 +34,6 @@ const config = {
   scripts: [
     {src: 'https://www.googletagmanager.com/gtag/js?id=G-4966Y3DK52', async: true},
     {src: '/google.js', async: true},
-    {src: '/app.js', async: true, type:'application/ld+json'},
   ],
 
   plugins: [
