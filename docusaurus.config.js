@@ -95,7 +95,7 @@ const config = {
           trackingID: 'G-3X2XHTPPFL',
         },
         googleTagManager: {
-          containerId: 'G-4966Y3DK52',
+          containerId: 'AW-11371629200',
         },
       }),
     ],
