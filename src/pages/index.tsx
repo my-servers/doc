@@ -7,13 +7,11 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import App from '../components/app';
-import jsonLD from './app.json'
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}></script>
       <App></App>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
