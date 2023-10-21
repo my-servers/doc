@@ -94,6 +94,9 @@ const config = {
         googleAnalytics: {
           trackingID: 'G-3X2XHTPPFL',
         },
+        googleTagManager: {
+          containerId: 'G-4966Y3DK52',
+        },
       }),
     ],
   ],
