@@ -7,7 +7,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-document.write("<script async src='https://www.googletagmanager.com/gtag/js?id=G-4966Y3DK52'></script>");
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
