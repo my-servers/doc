@@ -91,15 +91,10 @@ const config = {
           ignorePatterns: ['/tags/**','/blog/**'],
           filename: 'sitemap.xml',
         },
-      }),
-    ],
-    [
-      '@docusaurus/preset-classic',
-      {
         googleAnalytics: {
           trackingID: 'G-3X2XHTPPFL',
         },
-      },
+      }),
     ],
   ],
 
