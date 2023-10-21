@@ -11,6 +11,17 @@ var _hmt = _hmt || [];
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'G-4966Y3DK52');
-gtag('event', 'conversion', {'send_to': 'AW-11371629200/Zs2rCObng-8YEJCVta4q'});
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11371629200/gSd_CP6agO8YEJCVta4q',
+      'event_callback': callback
+  });
+  return false;
+}

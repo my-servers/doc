@@ -11,7 +11,9 @@ export default function App(screenshotSrc): JSX.Element {
                 <div className={scss.appInfo}>
                     <div className={scss.appHead}>
                         <div>
-                            <img src="img/newMyServer1024.png" className={scss.appIcon}></img>
+                            <a onClick={() => gtag_report_conversion("https://apps.apple.com/app/myservers/id6466196656")}>
+                                <img src="img/newMyServer1024.png" className={scss.appIcon}></img>
+                            </a>
                         </div>
                         <div>
                             <h1>MyServers</h1>
