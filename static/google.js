@@ -18,9 +18,9 @@ var _hmt = _hmt || [];
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "*",
+      "ratingValue": "5",
       "bestRating": "5",
-      "ratingCount": "*"
+      "ratingCount": "2"
     },
     "screenshot": "https://myservers.codeloverme.cn/img/app.webp",
     "downloadUrl": [
