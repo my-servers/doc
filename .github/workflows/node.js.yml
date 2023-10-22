@@ -29,13 +29,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        server: ['GG', 'XG', 'GZ']
+        server: ['43.138.184.162']
     steps:
     - uses: actions/checkout@v3
     - name: 上传到服务器
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
+        host: ${{ matrix.server }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './build'
@@ -43,7 +43,7 @@ jobs:
     - name: 上传配置
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
+        host: ${{ matrix.server }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './myservers.conf'
@@ -51,7 +51,7 @@ jobs:
     - name: 上传nginx.conf和docker-compose.yaml
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
+        host: ${{ matrix.server }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './nginx.conf,./docker-compose.yaml'
@@ -59,7 +59,7 @@ jobs:
     - name: 重启服务
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
+        host: ${{ matrix.server }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
