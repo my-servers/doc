@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        server_ip: ['${{ secrets.GG_HOST }}', '${{ secrets.XG_HOST }}', '${{ secrets.GZ_HOST }}']
+        server_ip: ['${{ env.GG_HOST }}', '${{ env.XG_HOST }}', '${{ env.GZ_HOST }}']
     steps:
     - uses: actions/checkout@v3
     - name: 上传到服务器
@@ -66,3 +66,7 @@ jobs:
           cd /home/myservers
           docker-compose up -d
           docker-compose restart
+    env:
+      GG_HOST: ${{ secrets.GG_HOST }}
+      XG_HOST: ${{ secrets.XG_HOST }}
+      GZ_HOST: ${{ secrets.GZ_HOST }}
