@@ -23,13 +23,15 @@ jobs:
       run: npm ci
     - name: 编译
       run: npm run build
+    outputs:
+      matrix_servers: ${{ steps.set-matrix.outputs.matrix_servers }}
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        server_ip: ['${{ env.GG_HOST }}', '${{ env.XG_HOST }}', '${{ env.GZ_HOST }}']
+        server_ip: ${{fromJson(needs.build.outputs.matrix_servers)}}
     steps:
     - uses: actions/checkout@v3
     - name: 上传到服务器
@@ -66,7 +68,7 @@ jobs:
           cd /home/myservers
           docker-compose up -d
           docker-compose restart
-    env:
-      GG_HOST: ${{ secrets.GG_HOST }}
-      XG_HOST: ${{ secrets.XG_HOST }}
-      GZ_HOST: ${{ secrets.GZ_HOST }}
+
+    - name: Set matrix servers
+      id: set-matrix
+      run: echo "::set-output name=matrix_servers::["${{ secrets.GG_HOST }}", "${{ secrets.XG_HOST }}", "${{ secrets.GZ_HOST }}"]"
