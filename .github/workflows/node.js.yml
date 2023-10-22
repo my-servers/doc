@@ -69,6 +69,11 @@ jobs:
           docker-compose up -d
           docker-compose restart
 
+  set-matrix:
+    runs-on: ubuntu-latest
+    steps:
     - name: Set matrix servers
       id: set-matrix
       run: echo "::set-output name=matrix_servers::["${{ secrets.GG_HOST }}", "${{ secrets.XG_HOST }}", "${{ secrets.GZ_HOST }}"]"
+    outputs:
+      matrix_servers: ${{ steps.set-matrix.outputs.matrix_servers }}
