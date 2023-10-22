@@ -23,21 +23,19 @@ jobs:
       run: npm ci
     - name: 编译
       run: npm run build
-    outputs:
-      matrix_servers: ${{ steps.set-matrix.outputs.matrix_servers }}
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        server_ip: ${{fromJson(needs.build.outputs.matrix_servers)}}
+        server: ['GG', 'XG', 'GZ']
     steps:
     - uses: actions/checkout@v3
     - name: 上传到服务器
       uses: appleboy/scp-action@master
       with:
-        host: ${{ matrix.server_ip }}
+        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './build'
@@ -45,7 +43,7 @@ jobs:
     - name: 上传配置
       uses: appleboy/scp-action@master
       with:
-        host: ${{ matrix.server_ip }}
+        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './myservers.conf'
@@ -53,7 +51,7 @@ jobs:
     - name: 上传nginx.conf和docker-compose.yaml
       uses: appleboy/scp-action@master
       with:
-        host: ${{ matrix.server_ip }}
+        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         source: './nginx.conf,./docker-compose.yaml'
@@ -61,19 +59,10 @@ jobs:
     - name: 重启服务
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ matrix.server_ip }}
+        host: ${{ secrets[format('{0}_HOST', matrix.server)] }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /home/myservers
           docker-compose up -d
           docker-compose restart
-
-  set-matrix:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Set matrix servers
-      id: set-matrix
-      run: echo "::set-output name=matrix_servers::["${{ secrets.GG_HOST }}", "${{ secrets.XG_HOST }}", "${{ secrets.GZ_HOST }}"]"
-    outputs:
-      matrix_servers: ${{ steps.set-matrix.outputs.matrix_servers }}
