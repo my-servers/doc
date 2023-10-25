@@ -162,7 +162,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} MyServers`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
