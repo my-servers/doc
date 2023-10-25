@@ -110,7 +110,7 @@ const config = {
       navbar: {
         title: 'MyServers',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'MyServers Logo',
           src: 'img/newMyServer1024.png',
         },
         items: [
@@ -162,7 +162,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} MyServers`,
       },
       prism: {
-        theme: darkCodeTheme,
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
