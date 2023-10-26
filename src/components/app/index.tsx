@@ -14,8 +14,8 @@ export default function App(screenshotSrc): JSX.Element {
                             <img src="img/newMyServer1024.png" className={scss.appIcon} alt="myservers logo"></img>
                         </div>
                         <div>
-                            <h1>MyServers</h1>
-                            <h3>一个App监控管理个人所有的服务器和应用</h3>
+                            <span className={scss.title}>MyServers</span>
+                            <span className={scss.title3}>一个App监控管理个人所有的服务器和应用</span>
                         </div>
                     </div>
                     {/* <br></br> */}
