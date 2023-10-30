@@ -32,7 +32,7 @@ const config = {
     locales: ['en'],
   },
   scripts: [
-    {src: 'https://www.googletagmanager.com/gtag/js?id=G-4966Y3DK52', async: true},
+    // {src: 'https://www.googletagmanager.com/gtag/js?id=G-4966Y3DK52', async: true},
     {src: '/google.js', async: true},
   ],
 
@@ -92,12 +92,12 @@ const config = {
           ignorePatterns: ['/tags/**','/blog/**'],
           filename: 'sitemap.xml',
         },
-        googleAnalytics: {
-          trackingID: 'G-3X2XHTPPFL',
-        },
-        googleTagManager: {
-          containerId: 'AW-11371629200',
-        },
+        // googleAnalytics: {
+        //   trackingID: 'G-3X2XHTPPFL',
+        // },
+        // googleTagManager: {
+        //   containerId: 'AW-11371629200',
+        // },
       }),
     ],
   ],
