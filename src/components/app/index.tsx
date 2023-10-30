@@ -7,7 +7,7 @@ import Link from '@docusaurus/Link';
 export default function App(screenshotSrc): JSX.Element {
     return (
         <div>
-            <div className={scss.app} style={{backgroundImage: `url('img/city.jpeg')`}}>
+            <div className={scss.app} style={{backgroundImage: `url('https://i.imgur.com/EmHsKuw.jpg')`}}>
                 <div className={scss.appInfo}>
                     <div className={scss.appHead}>
                         <div>
