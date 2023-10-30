@@ -29,8 +29,8 @@ export default function App(screenshotSrc): JSX.Element {
                 </div>
 
                 <div className={scss.screenshotDiv}>
-                    <img className={`${scss.iphoneImg} ${scss.screenshot1}`} src="img/service.webp"  alt="myservers service screenshot 服务截图"></img>
-                    <img className={`${scss.iphoneImg} ${scss.screenshot2}`} src="img/app.webp" alt="myservers app screenshot 应用截图"></img>
+                    <img className={`${scss.iphoneImg} ${scss.screenshot1}`} src="https://i.imgur.com/RuUR5ZG.jpg"  alt="myservers service screenshot 服务截图"></img>
+                    <img className={`${scss.iphoneImg} ${scss.screenshot2}`} src="https://i.imgur.com/tnOLcRc.jpg" alt="myservers app screenshot 应用截图"></img>
                 </div>
             </div>
 
