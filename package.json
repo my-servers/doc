@@ -30,6 +30,7 @@
     "@docusaurus/module-type-aliases": "2.4.3",
     "@docusaurus/plugin-ideal-image": "^2.4.3",
     "@tsconfig/docusaurus": "^1.0.5",
+    "fontaine": "^0.4.1",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",

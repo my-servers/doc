@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const fontaine = require('fontaine');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -37,6 +38,34 @@ const config = {
   ],
 
   plugins: [
+    function fontainePlugin(_context, _options) {
+      return {
+        name: 'fontaine-plugin',
+        configureWebpack(_config, _isServer) {
+          return {
+            plugins: [
+              fontaine.FontaineTransform.webpack({
+                fallbacks: [
+                  'system-ui',
+                  '-apple-system',
+                  'BlinkMacSystemFont',
+                  'Segoe UI',
+                  'Roboto',
+                  'Oxygen',
+                  'Ubuntu',
+                  'Cantarell',
+                  'Open Sans',
+                  'Helvetica Neue',
+                  'sans-serif',
+                ],
+                // You may need to resolve assets like `/fonts/Poppins-Bold.ttf` to a particular directory
+                resolvePath: (id) => '../fonts/' + id,
+              }),
+            ],
+          };
+        },
+      };
+    },
     function () {
       return {
         name: 'docusaurus-plugin-scss',
