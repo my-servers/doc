@@ -22,7 +22,7 @@ export default function App(screenshotSrc): JSX.Element {
                     <br></br>
                     
                     <div>
-                        <a href='https://apps.apple.com/app/myservers/id6466196656' onClick={() => gtag_report_conversion("https://apps.apple.com/app/myservers/id6466196656")}>
+                        <a href='https://apps.apple.com/app/myservers/id6466196656'>
                             <img src="img/appstore.png" className={scss.appStore}  alt="myservers download url 下载链接" height="80px"></img>
                             </a>
                     </div>
