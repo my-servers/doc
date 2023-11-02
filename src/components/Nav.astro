@@ -11,7 +11,7 @@ const links = config.Nav.Links
             <img src="https://myservers.codeloverme.cn/img/newMyServer1024.png" class="rounded-md md:rounded-xl w-10 md:w-16"></img>
             <span class="ml-3 text-xl ">MyServers</span>
         </a>
-        <nav class="ml-auto flex  items-center">
+        <nav class="ml-auto flex items-center">
             <img src="https://myservers.codeloverme.cn/img/newMyServer1024.png" class="rounded-md md:rounded-xl w-10 md:invisible"></img>
             {links.map((l) => {
                 return <NavLink url="./" name={l.name} url={l.url}></NavLink>

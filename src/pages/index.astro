@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro'
 import App from '../components/App.astro'
-
+import config from "../../config"
+import Plugins from '../components/Plugins.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="bg-gradient-to-b from-cyan-700 to-fuchsia-400">
+<Layout title={config.App.Name+"--"+config.App.Descript}>
+	<main class="bg-gradient-to-b from-cyan-800 to-fuchsia-400">
 		<header>
 			<Nav></Nav>
 		</header>
@@ -15,6 +16,10 @@ import App from '../components/App.astro'
 			<App></App>
 		</section>
 
+		
+		<Plugins>
+			
+		</Plugins>
 	</main>
 </Layout>
 
