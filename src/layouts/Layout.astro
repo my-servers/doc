@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+}
+import config from "../../config"
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import Seo from '../components/Seo.astro'
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta name="generator" content={Astro.generator} />
+		<Seo>	
+		</Seo>
+	</head>
+	<body class="bg-gradient-to-b from-cyan-800 via-pink-400 to-cyan-700 min-h-screen ">
+		<header>
+			<Nav></Nav>
+		</header>
+		<slot />
+		
+		<Footer>
+
+		</Footer>
+	</body>
+</html>
+<style is:global>
+	
+</style>

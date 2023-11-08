@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import App from '../components/App.astro'
+import config from "../../config"
+import Plugins from '../components/Plugins.astro'
+import Features from '../components/Features.astro'
+---
+
+<Layout title={config.App.Name+"--"+config.App.Descript}>
+	<main class="">
+		<section class="text-gray-600 body-font">
+			<App></App>
+		</section>
+
+		
+		<Plugins>
+
+		</Plugins>
+
+		<Features>
+
+		</Features>
+
+	</main>
+</Layout>

@@ -1,0 +1,38 @@
+---
+import {Plugin} from './Plugin'
+import config from "../../config"
+
+const plugins = config.Plugin.AllPlugins
+---
+
+
+<div class="grid grid-cols-1 gap-0">
+    <div>
+        <div class="flex flex-row items-center justify-center">
+            <h1><span class="text-gradient md:text-6xl text-xl font-bold ">插 件</span></h1>
+        </div>
+        <br>
+    {plugins.map((l) => {
+        return <div class="flex flex-row items-center justify-center">
+            {l.map((p) => {
+                return <Plugin url={p.url} color={p.color} name={p.name}/>
+            })}
+        </div>
+    })}
+    </div>
+
+</div>
+
+<style>
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+    :root {
+		--accent: 24, 58, 37;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #806e77 30%, rgb(211, 75, 75) 60%);
+	}
+</style>

@@ -1,0 +1,24 @@
+---
+import { NavLink } from "./NavLink";
+import config from "../../config"
+
+const links = config.Nav.Links
+const app = config.App
+---
+<!-- <div class="top-0 left-0 right-0 fixed bg-gray-100 "> -->
+<div class="top-0 left-0 right-0">
+    <div class="md:w-3/5 md:flex md:mx-auto p-5 md:items-left">
+        <a class="flex title-font font-medium items-center hidden md:inline-flex" href="./">
+            <img src={app.Logo} class="rounded-md md:rounded-xl w-10 md:w-16" alt="MyServers logo"></img>
+            <span class="ml-3 text-xl ">MyServers</span>
+        </a>
+        <nav class="ml-auto flex items-center">
+            <a href="./">
+                <img src={app.Logo} class="rounded-md md:rounded-xl w-10 md:invisible" alt="MyServers logo"></img>
+            </a>
+            {links.map((l) => {
+                return <NavLink url="./" name={l.name} url={l.url}></NavLink>
+            })}
+        </nav>
+    </div>
+</div>

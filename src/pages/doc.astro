@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from "../../config"
+import Start from '../doc/start.mdx'
+---
+
+<Layout title={config.App.Name+"--"+config.App.Descript}>
+    <div class="flex items-center justify-center ">
+        <article class="prose prose-stone md:prose-xl prose-sm text-gray-900 bg-gray-100 p-10 mt-10 shadow-2xl shadow-gray-700 w-[100%]  rounded-xl prose-code:before:hidden prose-code:after:hidden" >
+            <Start>
+            </Start>
+        </article>
+    </div>
+</Layout>
