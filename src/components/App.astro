@@ -34,4 +34,32 @@ const app = config.App
               </div>
         </div>
     </div>
+    <div class="downloadImg">
+        <img class="h-[100px]"  src={app.DownloadPic} alt="myservers download url 扫码下载地址"></img>
+        <span>扫码下载App</span>
+    </div>
 </div>
+
+<style>
+    .downloadImg {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        box-shadow: 0px 0px 10px #adadad;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        font-size: 14px;
+        padding-bottom: 2px;
+        img {
+            width: 90px;
+        }
+    }
+    @media (max-width: 600px) {
+        .downloadImg{
+            display: none;
+        }
+    }
+
+</style>

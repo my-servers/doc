@@ -12,7 +12,8 @@ export default {
         Descript:"一个App监控管理您所有的服务器和应用。",
         Name:"MyServers",
         Logo:"https://myservers.codeloverme.cn/img/newMyServer1024.png",
-        Url:"https://myservers.codeloverme.cn"
+        Url:"https://myservers.codeloverme.cn",
+        DownloadPic:"https://myservers.codeloverme.cn/img/myserverDownload.png"
     },
     Plugin:{
         AllPlugins:[
