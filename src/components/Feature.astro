@@ -1,0 +1,21 @@
+---
+
+
+interface Props {
+	title: string;
+	desc: string;
+	url: string;
+}
+
+const { title, desc, url } = Astro.props;
+---
+<div class="p-4 md:w-3/3 flex flex-col text-center items-center justify-center">
+    <div class="inline-flex items-center justify-center rounded-full text-indigo-500 mb-5 flex-shrink-0">
+        <img class="w-40 h-40 " src={url} alt={title}/>
+    </div>
+    <div class="flex-grow">
+        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{title}</h2>
+        <p class="leading-relaxed text-gray-800 text-base">{desc}</p>
+        
+    </div>
+</div>

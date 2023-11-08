@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from "../../config"
+import Private from '../doc/private_policy.mdx'
+---
+
+<Layout title={config.App.Name+"--"+config.App.Descript}>
+    <div class="flex items-center justify-center ">
+        <article class="prose prose-stone prose-sm md:prose-xl text-gray-900 bg-gray-100 p-10 mt-10 shadow-2xl shadow-gray-700 rounded-xl w-[100%] prose-code:before:hidden prose-code:after:hidden" >
+            <Private>
+            </Private>
+        </article>
+    </div>
+</Layout>

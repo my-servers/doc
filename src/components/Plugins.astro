@@ -1,25 +1,38 @@
 ---
 import {Plugin} from './Plugin'
+import config from "../../config"
+
+const plugins = config.Plugin.AllPlugins
 ---
 
 
-<div class="flex items-center justify-center min-h-screen">
-    <div class="bg-white p-4 rounded-lg shadow-md">
-        <div class="w-24 h-24 bg-black rounded-full relative">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-45"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-90"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-135"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-180"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-225"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-270"></div>
-                <div class="w-2 h-6 bg-white absolute top-0 left-1/2 transform -translate-x-1/2 rotate-315"></div>
-            </div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div class="w-1 h-8 bg-red-500 absolute top-0 left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1 h-6 bg-white absolute bottom-0 left-1/2 transform -translate-x-1/2"></div>
-            </div>
+<div class="grid grid-cols-1 gap-0">
+    <div>
+        <div class="flex flex-row items-center justify-center">
+            <h1><span class="text-gradient md:text-6xl text-xl font-bold ">插 件</span></h1>
         </div>
+        <br>
+    {plugins.map((l) => {
+        return <div class="flex flex-row items-center justify-center">
+            {l.map((p) => {
+                return <Plugin url={p.url} color={p.color} name={p.name}/>
+            })}
+        </div>
+    })}
     </div>
+
 </div>
+
+<style>
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+    :root {
+		--accent: 24, 58, 37;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #806e77 30%, rgb(211, 75, 75) 60%);
+	}
+</style>
