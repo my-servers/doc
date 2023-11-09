@@ -7,13 +7,16 @@ const app = config.App
 <meta charset="UTF-8" />
 <link rel="icon" type="image/svg+xml" href={config.App.Logo} />
 <link rel="canonical" href={app.Url} />
+<link rel="preconnect" href="https://hm.baidu.comm" />
+<link rel="preconnect" href="https://www.clarity.ms" />
+<link rel="preconnect" href="https://schema.org" />
 <meta name="robots" content="index, follow"> 
 <title>{app.Name+"-"+app.Descript}</title>
 <meta name="description" content={app.Descript}>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="keywords" content="服务器应用监控管理,开源软件管理,docker,qbittorrent,transmission,aria2,wordpress,frp,proxmox"/>
 
-<script async>
+<script defer>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -22,7 +25,7 @@ const app = config.App
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
-<script async>
+<script defer>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -32,7 +35,7 @@ const app = config.App
     })();
 </script>
 
-<script async type="text/javascript">
+<script defer type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -41,7 +44,7 @@ const app = config.App
 </script>
 
 
-<script async type="application/ld+json">
+<script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
