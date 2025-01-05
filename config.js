@@ -7,8 +7,8 @@ export default {
         ]
     },
     App:{
-        ScreenShotFirst:"/img/service.webp",
-        ScreenShotSecond:"/img/app.webp",
+        ScreenShotFirst:"/img/service.png",
+        ScreenShotSecond:"/img/app.png",
         Descript:"一个App监控管理您所有的服务器和应用。",
         Name:"MyServers",
         Logo:"/img/newMyServer1024.png",
