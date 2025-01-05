@@ -1,7 +1,7 @@
 export default {
     Nav:{
         Links:[
-            {name:"快速开始", url:"/doc"},
+            {name:"快速开始", url:"https://docs.qq.com/aio/p/sc3k129d85vudpz?p=lsT1PLnYjuIuRaSbDS2bLA"},
             // {name:"隐私政策", url:"/private_policy"},
             {name:"Github", url:"https://github.com/my-servers"},
         ]
@@ -11,7 +11,7 @@ export default {
         ScreenShotSecond:"/img/app.png",
         Descript:"一个App监控管理您所有的服务器和应用。",
         Name:"MyServers",
-        Logo:"/img/newMyServer1024.png",
+        Logo:"/img/v2_logo_v12.png",
         Url:"https://myservers.codeloverme.cn",
         DownloadPic:"/img/myserverDownload.png"
     },
